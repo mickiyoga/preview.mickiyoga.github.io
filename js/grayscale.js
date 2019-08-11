@@ -185,3 +185,27 @@ function init() {
         icon: image
     });
 }
+
+// Augmented event logging for clicky
+function logEmailEnquiry() {
+    var name = $("#email-name").val();
+    var address = $("#email-address").val();
+    var href = "#email?data=" + encodeURIComponent(JSON.stringify({
+        name: name,
+        address: address,
+        body: $("#email-body").val(),
+        ua: window.navigator.userAgent
+    }));
+    var title = name + " (" + address + ")"
+    clicky.log(href, title, "outbound");
+    clicky.goal("16514");
+    return true;
+}
+
+function logNavbarClick(event) {
+    clicky.log(event.target.getAttribute("href"), event.target.innerText);
+    return true;
+}
+
+$("#email-enquiry").submit(logEmailEnquiry);
+$(".nav a").click(logNavbarClick);
