@@ -1,0 +1,98 @@
+/* Todo
+  - Animate links to sections and modal show/hide
+  - Slight paralax on background images
+  - Clean up media
+  - Could use templates for repeatable sections
+*/
+
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+:root {
+    --fade: #ffffff88;
+    --highlight: lightseagreen;
+    --bright: white;
+    --soft: grey;
+}
+
+#splash {
+    background-attachment: fixed;
+    background-image: url("./media/mountain.jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 35%;
+    height: 110vh;
+}
+
+#purpose {
+    background-image: url("./media/white_opal.jpg");
+    background-size: cover;
+    background-position-x: center;
+    min-height: 110vh;
+}
+
+/* (Mimic Bulma box radius) */
+.box-radius {
+    border-radius: 6px;
+}
+
+.text-highlight {
+    color: var(--highlight);
+}
+
+.text-bright {
+    color: var(--bright);
+}
+
+.text-soft {
+    color: var(--soft);
+}
+
+.list-height-double li {
+    line-height: 200%;
+}
+
+.bg-none {
+    background: none;
+}
+
+.bg-fade {
+    background-color: var(--fade);
+}
+
+.bg-highlight {
+    background-color: var(--highlight);
+}
+
+.bg-canvas {
+    background-attachment: fixed;
+    background-position: 50%;
+    background-size: auto;
+}
+
+.bg-canvas-full {
+    background-image: url("./media/bg.jpg");
+}
+
+.bg-canvas-1-left {
+    background-image: url("./media/canvas_1_left.jpg");
+}
+
+.bg-canvas-1-mid {
+    background-image: url("./media/canvas_1_mid.jpg");
+}
+
+.bg-canvas-1-right {
+    background-image: url("./media/canvas_1_right.jpg");
+}
+
+.bg-canvas-2-left {
+    background-image: url("./media/canvas_2_left.jpg");
+}
+
+.bg-canvas-2-mid {
+    background-image: url("./media/canvas_2_mid.jpg");
+}
+
+.bg-canvas-2-right {
+    background-image: url("./media/canvas_2_right.jpg");
+}
